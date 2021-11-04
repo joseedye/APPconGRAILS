@@ -45,7 +45,17 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
     }
+plugins {
+  id "org.sonarqube" version "3.3"
+}
 
+sonarqube {
+  properties {
+    property "sonar.projectKey", "joseedye_APPconGRAILS"
+    property "sonar.organization", "joseedye"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
          runtime 'mysql:mysql-connector-java:5.1.48'
