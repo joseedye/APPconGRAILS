@@ -41,6 +41,18 @@ grails.views.default.codec = "html"
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
 
+
+plugins {
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "joseedye_APPconGRAILS"
+    property "sonar.organization", "joseedye"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
 // GSP settings
 grails {
     views {
